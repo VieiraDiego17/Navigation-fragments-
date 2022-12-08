@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="botao_cinza">
+        <item name="backgroundTint">@color/botao</item>
+    </style>
+
+    <style name="botao_preto">
+        <item name="backgroundTint">@color/black</item>
+    </style>
+
+    <style name="botao_azul">
+        <item name="backgroundTint">@color/botao_azul</item>
+    </style>
+
+    <style name="botao_verde">
+        <item name="backgroundTint">@color/botao_verde</item>
+    </style>
+
+    <style name="botao_vermelho">
+        <item name="backgroundTint">@color/botao_vermelho</item>
+    </style>
+
+    <style name="botao_branco">
+        <item name="backgroundTint">@color/white</item>
+    </style>
+
+</resources>

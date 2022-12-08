@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/terceira_tela">
+
+
+    <Button
+        android:id="@+id/buttonThirdToFirst"
+        android:layout_width="287dp"
+        android:layout_height="65sp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/cantos_botao"
+        style="@style/botao_branco"
+        android:text="IR PARA PRIMEIRA TELA"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/buttonThirdToSecond"
+        android:layout_width="287dp"
+        android:layout_height="65sp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/cantos_botao"
+        style="@style/botao_branco"
+        android:text="IR PARA SEGUNDA TELA"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonThirdToFirst" />
+
+    <Button
+        android:id="@+id/buttonThirdToFourth"
+        android:layout_width="287dp"
+        android:layout_height="65sp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/cantos_botao"
+        style="@style/botao_branco"
+        android:text="IR PARA QUARTA TELA"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonThirdToSecond" />
+
+    <Button
+        android:id="@+id/buttonThirdToFifth"
+        android:layout_width="287dp"
+        android:layout_height="65sp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/cantos_botao"
+        style="@style/botao_branco"
+        android:text="IR PARA QUINTA TELA"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonThirdToFourth" />
+
+    <TextView
+        android:id="@+id/textMensagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonThirdToFifth" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="TERCEIRA TELA"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/fragmentFirst">
+
+    <fragment
+        android:id="@+id/fragmentFirst"
+        android:name="com.example.navigation.FragmentFirst"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/actionFirstToSecond"
+            app:destination="@id/fragmentSecond2" />
+        <action
+            android:id="@+id/actionFirstToThird"
+            app:destination="@id/fragmentThird" />
+        <action
+            android:id="@+id/actionFirstToFourth"
+            app:destination="@id/fragmentFourth" />
+        <action
+            android:id="@+id/actionFirstToFifth"
+            app:destination="@id/fragmentFifth" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSecond2"
+        android:name="com.example.navigation.FragmentSecond"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/actionSecondToFirst"
+            app:destination="@id/fragmentFirst" />
+        <action
+            android:id="@+id/actionSecondToThird"
+            app:destination="@id/fragmentThird" />
+        <action
+            android:id="@+id/actionSecondToFourth"
+            app:destination="@id/fragmentFourth" />
+        <action
+            android:id="@+id/actionSecondToFifth"
+            app:destination="@id/fragmentFifth" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentThird"
+        android:name="com.example.navigation.FragmentThird"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_third" >
+        <action
+            android:id="@+id/actionThirdToSecond"
+            app:destination="@id/fragmentSecond2" />
+        <action
+            android:id="@+id/actionThirdToFirst"
+            app:destination="@id/fragmentFirst" />
+        <action
+            android:id="@+id/actionThirdToFourth"
+            app:destination="@id/fragmentFourth" />
+        <action
+            android:id="@+id/actionThirdToFifth"
+            app:destination="@id/fragmentFifth" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentFourth"
+        android:name="com.example.navigation.FragmentFourth"
+        android:label="fragment_fourth"
+        tools:layout="@layout/fragment_fourth" >
+        <action
+            android:id="@+id/actionFourthToFirst"
+            app:destination="@id/fragmentFirst" />
+        <action
+            android:id="@+id/actionFourthToSecond"
+            app:destination="@id/fragmentSecond2" />
+        <action
+            android:id="@+id/actionFourthTothird"
+            app:destination="@id/fragmentThird" />
+        <action
+            android:id="@+id/actionFourthToFifth"
+            app:destination="@id/fragmentFifth" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentFifth"
+        android:name="com.example.navigation.FragmentFifth"
+        android:label="fragment_fifth"
+        tools:layout="@layout/fragment_fifth" >
+        <action
+            android:id="@+id/actionFifthToFourth"
+            app:destination="@id/fragmentFourth" />
+        <action
+            android:id="@+id/actionFifthToFirst"
+            app:destination="@id/fragmentFirst" />
+        <action
+            android:id="@+id/actionFifthToSecond"
+            app:destination="@id/fragmentSecond2" />
+        <action
+            android:id="@+id/actionFifthToThird"
+            app:destination="@id/fragmentThird" />
+    </fragment>
+</navigation>
