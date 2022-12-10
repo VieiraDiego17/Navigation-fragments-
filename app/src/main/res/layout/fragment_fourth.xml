@@ -73,7 +73,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="20dp"
         android:text="QUARTA TELA"
         android:textColor="@color/white"
         android:textSize="30sp"

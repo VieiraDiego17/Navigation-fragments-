@@ -13,9 +13,32 @@ class FragmentFirst : Fragment(R.layout.fragment_first) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        navigation(view)
+
+        sendInfo(view)
+
+    }
+
+    fun sendInfo(view: View) {
+        val info = view?.findViewById<EditText>(R.id.numeroDigitado)
+        val infoToInt = info?.text.toString().toInt()
+
         view.findViewById<Button>(R.id.buttonFirstToSecond).setOnClickListener {
-            findNavController().navigate(R.id.actionFirstToSecond)
+            val direction = FragmentFirstDirections.actionFirstToSecond(number = infoToInt)
+            findNavController().navigate(direction)
         }
+
+//        view.findViewById<Button>(R.id.buttonEnviarInfo).setOnClickListener {
+//            val direction = FragmentFirstDirections.actionFirstToSecond()
+//            direction.number = infoToInt
+//            findNavController().navigate(direction)
+//        }
+    }
+
+    fun navigation(view: View) {
+//        view.findViewById<Button>(R.id.buttonFirstToSecond).setOnClickListener {
+//            findNavController().navigate(R.id.actionFirstToSecond)
+//        }
         view.findViewById<Button>(R.id.buttonFirstToThird).setOnClickListener {
             findNavController().navigate(R.id.actionFirstToThird)
         }
@@ -25,14 +48,5 @@ class FragmentFirst : Fragment(R.layout.fragment_first) {
         view.findViewById<Button>(R.id.buttonFirstToFifth).setOnClickListener {
             findNavController().navigate(R.id.actionFirstToFifth)
         }
-
-//        val mensagemRecebida = view?.findViewById<EditText>(R.id.numeroDigitado)
-//        val mensagemConvertida = mensagemRecebida?.text.toString().toInt()
-//        val acao = FragmentFirstDirections.actionFirstToSecond(
-//            number = mensagemConvertida
-//        )
-//        view.findViewById<Button>(R.id.buttonEnviarInfo).setOnClickListener {
-//            findNavController().navigate(acao)
-//        }
     }
 }
