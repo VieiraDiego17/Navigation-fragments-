@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
@@ -12,37 +13,46 @@ import androidx.navigation.fragment.navArgs
 
 class FragmentSecond : Fragment(R.layout.fragment_second) {
 
-    val argumentos: FragmentSecondArgs by navArgs()
-    //val argumentos by navArgs<FragmentSecondArgs>()
+    private val args: FragmentSecondArgs by navArgs()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         navigation(view)
 
-        val info = argumentos.number
-        //val infoReceived = view.findViewById<TextView>(R.id.textMensagem).setText(info)
-        val infoReceived = view.findViewById<TextView>(R.id.textMensagem)
-        //infoReceived.text = info.toString()
-        infoReceived.text = "${info}"
-//        val mensagemRecebida = view.findViewById<TextView>(R.id.textMensagem)
-//        val number = args.number
-//        //mensagemRecebida.text = number.toString()
-//        mensagemRecebida.text = "${args.number}"
+        view.findViewById<TextView>(R.id.textMensagem).text = "${args.numberSecond}"
     }
 
     fun navigation(view: View){
+
+        val info = view?.findViewById<EditText>(R.id.numeroDigitado)
+
         view.findViewById<Button>(R.id.buttonSecondToFirst).setOnClickListener {
-            findNavController().navigate(R.id.actionSecondToFirst)
+            val action = FragmentSecondDirections.actionSecondToFirst(
+                info?.text.toString().toInt()            )
+            findNavController().navigate(action)
         }
+
         view.findViewById<Button>(R.id.buttonSecondToThird).setOnClickListener {
-            findNavController().navigate(R.id.actionSecondToThird)
+            val action = FragmentSecondDirections.actionSecondToThird(
+                info?.text.toString().toInt()
+            )
+            findNavController().navigate(action)
         }
+
         view.findViewById<Button>(R.id.buttonSecondToFourth).setOnClickListener {
-            findNavController().navigate(R.id.actionSecondToFourth)
+            val action = FragmentSecondDirections.actionSecondToFourth(
+                info?.text.toString().toInt()
+            )
+            findNavController().navigate(action)
         }
+
         view.findViewById<Button>(R.id.buttonSecondToFifth).setOnClickListener {
-            findNavController().navigate(R.id.actionSecondToFifth)
+            val action = FragmentSecondDirections.actionSecondToFifth(
+                info?.text.toString().toInt()
+            )
+            findNavController().navigate(action)
         }
     }
     }
+

@@ -60,7 +60,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:text="PRIMEIRA TELA"
         android:textColor="@color/white"
         android:textSize="30sp"
@@ -72,13 +72,25 @@
         android:id="@+id/textMensagem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Digite um número de 0 até 100"
+        android:layout_marginTop="20dp"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonFirstToFifth" />
+
+    <TextView
+        android:id="@+id/textAviso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Digite um número de 0 até 100 \n Será enviado para as próximas telas."
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textMensagem" />
 
     <EditText
         android:id="@+id/numeroDigitado"
@@ -93,17 +105,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textMensagem" />
+        app:layout_constraintTop_toBottomOf="@+id/textAviso" />
 
-    <Button
-        android:id="@+id/buttonEnviarInfo"
-        style="@style/botao_cinza"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/cantos_botao"
-        android:text="ENVIAR"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numeroDigitado" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

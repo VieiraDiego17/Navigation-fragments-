@@ -22,6 +22,7 @@
         <action
             android:id="@+id/actionFirstToFifth"
             app:destination="@id/fragmentFifth" />
+
     </fragment>
     <fragment
         android:id="@+id/fragmentSecond2"
@@ -41,9 +42,10 @@
             android:id="@+id/actionSecondToFifth"
             app:destination="@id/fragmentFifth" />
         <argument
-            android:name="number"
-            app:argType="integer"
-            android:defaultValue="0" />
+            android:name="numberSecond"
+            app:argType="integer"/>
+
+
     </fragment>
     <fragment
         android:id="@+id/fragmentThird"
@@ -62,6 +64,9 @@
         <action
             android:id="@+id/actionThirdToFifth"
             app:destination="@id/fragmentFifth" />
+        <argument
+            android:name="numberThird"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/fragmentFourth"
@@ -80,6 +85,9 @@
         <action
             android:id="@+id/actionFourthToFifth"
             app:destination="@id/fragmentFifth" />
+        <argument
+            android:name="numberFourth"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/fragmentFifth"
@@ -98,5 +106,8 @@
         <action
             android:id="@+id/actionFifthToThird"
             app:destination="@id/fragmentThird" />
+        <argument
+            android:name="numberFifth"
+            app:argType="integer" />
     </fragment>
 </navigation>

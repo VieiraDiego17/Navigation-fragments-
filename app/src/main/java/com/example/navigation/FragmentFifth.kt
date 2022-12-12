@@ -6,12 +6,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 
 class FragmentFifth : Fragment(R.layout.fragment_fifth) {
+    private val args: FragmentFifthArgs by navArgs()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        navigations(view)
+        view.findViewById<TextView>(R.id.textMensagem).text = "${args.numberFifth}"
+
+    }
+    fun navigations(view: View){
         view.findViewById<Button>(R.id.buttonFifthToFirst).setOnClickListener {
             findNavController().navigate(R.id.actionFifthToFirst)
         }

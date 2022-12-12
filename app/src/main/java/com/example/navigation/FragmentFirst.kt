@@ -15,38 +15,38 @@ class FragmentFirst : Fragment(R.layout.fragment_first) {
 
         navigation(view)
 
-        sendInfo(view)
-
-    }
-
-    fun sendInfo(view: View) {
-        val info = view?.findViewById<EditText>(R.id.numeroDigitado)
-        val infoToInt = info?.text.toString().toInt()
-
-        view.findViewById<Button>(R.id.buttonFirstToSecond).setOnClickListener {
-            val direction = FragmentFirstDirections.actionFirstToSecond(number = infoToInt)
-            findNavController().navigate(direction)
-        }
-
-//        view.findViewById<Button>(R.id.buttonEnviarInfo).setOnClickListener {
-//            val direction = FragmentFirstDirections.actionFirstToSecond()
-//            direction.number = infoToInt
-//            findNavController().navigate(direction)
-//        }
     }
 
     fun navigation(view: View) {
-//        view.findViewById<Button>(R.id.buttonFirstToSecond).setOnClickListener {
-//            findNavController().navigate(R.id.actionFirstToSecond)
-//        }
+        val info = view?.findViewById<EditText>(R.id.numeroDigitado)
+
+        view?.findViewById<Button>(R.id.buttonFirstToSecond)?.setOnClickListener{
+            val action = FragmentFirstDirections.actionFirstToSecond(
+                info?.text.toString().toInt()
+            )
+            findNavController().navigate(action)
+        }
+
         view.findViewById<Button>(R.id.buttonFirstToThird).setOnClickListener {
-            findNavController().navigate(R.id.actionFirstToThird)
+            val action = FragmentFirstDirections.actionFirstToThird(
+                info?.text.toString().toInt()
+            )
+            findNavController().navigate(action)
         }
+
         view.findViewById<Button>(R.id.buttonFirstToFourth).setOnClickListener {
-            findNavController().navigate(R.id.actionFirstToFourth)
-        }
+            val action = FragmentFirstDirections.actionFirstToFourth(
+                info?.text.toString().toInt()
+            )
+            findNavController().navigate(action)        }
         view.findViewById<Button>(R.id.buttonFirstToFifth).setOnClickListener {
-            findNavController().navigate(R.id.actionFirstToFifth)
+            val action = FragmentFirstDirections.actionFirstToFifth(
+                info?.text.toString().toInt()
+            )
+            findNavController().navigate(action)
         }
     }
 }
+
+
+
