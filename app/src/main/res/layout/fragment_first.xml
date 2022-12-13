@@ -69,17 +69,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textMensagem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonFirstToFifth" />
-
-    <TextView
         android:id="@+id/textAviso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -90,7 +79,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textMensagem" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonFirstToFifth" />
 
     <EditText
         android:id="@+id/numeroDigitado"

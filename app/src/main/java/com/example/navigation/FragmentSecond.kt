@@ -24,34 +24,20 @@ class FragmentSecond : Fragment(R.layout.fragment_second) {
     }
 
     fun navigation(view: View){
-
-        val info = view?.findViewById<EditText>(R.id.numeroDigitado)
-
         view.findViewById<Button>(R.id.buttonSecondToFirst).setOnClickListener {
-            val action = FragmentSecondDirections.actionSecondToFirst(
-                info?.text.toString().toInt()            )
-            findNavController().navigate(action)
+            findNavController().navigate(R.id.actionSecondToFirst)
         }
 
         view.findViewById<Button>(R.id.buttonSecondToThird).setOnClickListener {
-            val action = FragmentSecondDirections.actionSecondToThird(
-                info?.text.toString().toInt()
-            )
-            findNavController().navigate(action)
+            findNavController().navigate(R.id.actionSecondToThird)
         }
 
         view.findViewById<Button>(R.id.buttonSecondToFourth).setOnClickListener {
-            val action = FragmentSecondDirections.actionSecondToFourth(
-                info?.text.toString().toInt()
-            )
-            findNavController().navigate(action)
+            findNavController().navigate(R.id.actionSecondToFourth)
         }
 
         view.findViewById<Button>(R.id.buttonSecondToFifth).setOnClickListener {
-            val action = FragmentSecondDirections.actionSecondToFifth(
-                info?.text.toString().toInt()
-            )
-            findNavController().navigate(action)
+            findNavController().navigate(R.id.actionSecondToFifth)
         }
     }
     }

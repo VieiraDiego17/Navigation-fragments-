@@ -63,15 +63,28 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonThirdToFourth" />
 
     <TextView
+        android:id="@+id/textAviso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:text="O dado recebido da primeira tela é:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonThirdToFifth" />
+
+    <TextView
         android:id="@+id/textMensagem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="20dp"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonThirdToFifth" />
+        app:layout_constraintTop_toBottomOf="@+id/textAviso" />
 
     <TextView
         android:id="@+id/textView"

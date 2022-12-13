@@ -18,6 +18,7 @@ class FragmentFourth : Fragment(R.layout.fragment_fourth) {
         navigations(view)
 
         view.findViewById<TextView>(R.id.textMensagem).text = "${args.numberFourth}"
+
     }
 
         fun navigations(view: View){

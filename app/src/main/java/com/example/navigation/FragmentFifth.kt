@@ -16,7 +16,9 @@ class FragmentFifth : Fragment(R.layout.fragment_fifth) {
         super.onViewCreated(view, savedInstanceState)
 
         navigations(view)
+
         view.findViewById<TextView>(R.id.textMensagem).text = "${args.numberFifth}"
+
 
     }
     fun navigations(view: View){

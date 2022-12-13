@@ -19,7 +19,9 @@ class FragmentThird : Fragment(R.layout.fragment_third) {
         navigation(view)
 
         view.findViewById<TextView>(R.id.textMensagem).text = "${args.numberThird}"
+
     }
+
         fun navigation(view: View){
         view.findViewById<Button>(R.id.buttonThirdToFirst).setOnClickListener {
             findNavController().navigate(R.id.actionThirdToFirst)
