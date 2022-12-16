@@ -18,27 +18,37 @@ class FragmentSecond : Fragment(R.layout.fragment_second) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        navigation(view)
+        secondToFirst(view)
+        secondToThird(view)
+        secondToFourth(view)
+        secondToFifth(view)
 
-        view.findViewById<TextView>(R.id.textMensagem).text = "${args.numberSecond}"
+        view?.findViewById<TextView>(R.id.textMensagem)?.text = "${args.numberSecond}"
     }
 
-    fun navigation(view: View){
-        view.findViewById<Button>(R.id.buttonSecondToFirst).setOnClickListener {
+    fun secondToFirst(view: View) {
+        view?.findViewById<Button>(R.id.buttonSecondToFirst)?.setOnClickListener {
             findNavController().navigate(R.id.actionSecondToFirst)
         }
+    }
 
-        view.findViewById<Button>(R.id.buttonSecondToThird).setOnClickListener {
+    fun secondToThird(view: View) {
+        view?.findViewById<Button>(R.id.buttonSecondToThird)?.setOnClickListener {
             findNavController().navigate(R.id.actionSecondToThird)
         }
+    }
 
-        view.findViewById<Button>(R.id.buttonSecondToFourth).setOnClickListener {
+    fun secondToFourth(view: View) {
+        view?.findViewById<Button>(R.id.buttonSecondToFourth)?.setOnClickListener {
             findNavController().navigate(R.id.actionSecondToFourth)
         }
+    }
 
-        view.findViewById<Button>(R.id.buttonSecondToFifth).setOnClickListener {
+    fun secondToFifth(view: View) {
+        view?.findViewById<Button>(R.id.buttonSecondToFifth)?.setOnClickListener {
             findNavController().navigate(R.id.actionSecondToFifth)
         }
     }
-    }
+}
+
 
